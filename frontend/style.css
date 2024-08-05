@@ -1,0 +1,141 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+:root {
+    --text-color-dark: #2f2f2f;
+    --BG-light: rgb(230, 228, 228);
+    --box-shadow: rgba(0, 0, 0, .1);
+    --button-bg-normal: rgb(0, 132, 255);
+    --button-bg-hover: rgb(0, 98, 255);
+    --button-border-radius: 5px;
+    --form-field-color: #757575;
+}
+
+a {
+    text-decoration: none;
+    font-size: initial;
+    font-weight: initial;
+}
+
+header {
+    padding: 20px 30px;
+}
+
+nav, form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--BG-light);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--box-shadow);
+    transition: all .3s;
+}
+
+#loggings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: inherit;
+}
+
+#site-title {
+    color: var(--text-color-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    transition: inherit;
+}
+
+#sign-up, #sign-in {
+    transition: inherit;
+}
+
+#sign-in {
+    color: var(--button-bg-normal);
+}
+
+#sign-in:hover {
+    color: var(--button-bg-hover);
+    text-decoration: underline;
+}
+
+.btn {
+    border: none;
+    color: white;
+    background-color: var(--button-bg-normal);
+    box-shadow: 0 0 5px 2px var(--box-shadow);
+    border-radius: var(--button-border-radius);
+    padding: 8px 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--button-bg-hover);
+    text-decoration: underline;
+}
+
+#logging-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84vh;
+}
+
+form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--button-border-radius);
+    color: var(--text-color-dark);
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+}
+
+form input::placeholder,
+form select {
+    color: var(--form-field-color);
+}
+
+#wanna-sign-up {
+    align-self: flex-end;
+}
+
+#wanna-sign-up > a {
+    font-size: .9rem;
+    color: var(--button-bg-normal);
+}
+
+#wanna-sign-up > a:hover {
+    color: var(--button-bg-hover);
+    text-decoration: underline;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
