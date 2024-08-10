@@ -8,18 +8,18 @@ const leaveTable = document.getElementById("leave-table");
 
 profileBtn.addEventListener('click', () => {
     profile.classList.toggle('show');
-    leaveReq.classList.toggle('hide');
-    leaveTable.classList.toggle('hide');
+    leaveReq.classList.remove('show');
+    leaveTable.classList.remove('show');
 });
 
 leaveBtn.addEventListener('click', () => {
-    profile.classList.toggle('hide');
+    profile.classList.remove('show');
     leaveReq.classList.toggle('show');
-    leaveTable.classList.toggle('hide');
+    leaveTable.classList.remove('show');
 });
 
 viewLeaveBtn.addEventListener('click', () => {
-    profile.classList.toggle('hide');
-    leaveReq.classList.toggle('hide');
+    profile.classList.remove('show');
+    leaveReq.classList.remove('show');
     leaveTable.classList.toggle('show');
 });
