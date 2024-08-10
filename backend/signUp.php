@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signning Up | HRMS</title>
+    <link rel="stylesheet" href="../frontend/style.css">
+</head>
+<body>
+</body>
+</html>
+
 <?php
     function validateAndSanitizeInput(&$firstName, &$lastName, &$address, &$phone, &$username, &$email, &$password) {
         $firstName = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -8,14 +20,14 @@
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-        $password = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
         if (empty($email))
             return false;
         return true;
     }
 
     function enterDataInDatabase(&$firstName, &$lastName, &$address, &$role, &$department, &$phone, &$username, &$email, &$password) {
-        $employeeQuery = "INSERT INTO employee (first_Name, last_Name, address, phone, username, email, password, role_Name, dept_Name) VALUES ('{$firstName}', '{$lastName}', '{$address}', '{$phone}', '{$username}', '{$email}', '{$password}', '{$role}', '{$department}');";
+        $employeeQuery = "INSERT INTO employee (first_Name, last_Name, address, phone, username, email, `password`, role_Name, dept_Name) VALUES ('{$firstName}', '{$lastName}', '{$address}', '{$phone}', '{$username}', '{$email}', '{$password}', '{$role}', '{$department}');";
         $departmentQuery = "UPDATE department SET count = count + 1 WHERE dept_Name = '{$department}';";
         $roleQuery = "UPDATE role SET count = count + 1 WHERE role_Name = '{$role}';";
 
