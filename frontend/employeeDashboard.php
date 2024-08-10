@@ -30,17 +30,71 @@
             <p id="user-fullname">
                 <?php echo "{$_SESSION['first_Name']} {$_SESSION['last_Name']}"?>
             </p>
-            <p id="role">
+            <p id="user-role">
                 <?php echo ucfirst($_SESSION['role_Name']) ?>
             </p>
             <hr>
             <ul>
-                <li id="profile" class="function">My Profile</li>
+                <li id="view-profile" class="function">My Profile</li>
                 <li id="leave-request" class="function">Request Leave</li>
                 <li id="view-leaves" class="function">My Leaves</li>
             </ul>
         </div>
-        
+        <section id="profile">
+            <p>
+                <span class="bold">Name: </span>
+                <?php echo "{$_SESSION['first_Name']} {$_SESSION['last_Name']}"?>
+            </p>
+            <p>
+                <span class="bold">Address: </span>
+                <?php echo ucfirst($_SESSION['address']) ?>
+            </p>
+            <p>
+                <span class="bold">Phone Number: </span>
+                <?php echo ucfirst($_SESSION['phone']) ?>
+            </p>
+            <p>
+                <span class="bold">Role: </span>
+                <?php echo ucfirst($_SESSION['role_Name']) ?>
+            </p>
+            <p>
+                <span class="bold">Department: </span>
+                <?php 
+                    switch ($_SESSION['dept_Name']) {
+                        case "qa":
+                            echo "Quality Assurance";
+                            break;
+                        case "dev":
+                            echo "Development";
+                            break;
+                        case "cyb-sec":
+                            echo "Cyber Security";
+                            break;
+                        case "dev-ops":
+                            echo "Dev Ops";
+                            break;
+                    }
+                ?>
+            </p>
+            <p>
+                <span class="bold">Username: </span>
+                <?php echo $_SESSION['username'] ?>
+            </p>
+            <p>
+                <span class="bold">Email: </span>
+                <?php echo $_SESSION['email'] ?>
+            </p>
+            <p>
+                <span class="bold">Password: </span>
+                <?php echo $_SESSION['password'] ?>
+            </p>
+        </section>
+        <section id="leave">
+            
+        </section>
+        <section id="leave-table">
+            
+        </section>
     </main>
 </body>
 </html>
