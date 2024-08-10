@@ -27,6 +27,26 @@ a {
     font-weight: initial;
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+hr {
+    width: 100%;
+    background-color: var(--button-bg-hover);
+    border: none;
+    height: 1px;
+}
+
 header {
     padding: 20px 30px;
     display: flex;
@@ -86,6 +106,7 @@ nav, form {
     box-shadow: 0 0 5px 2px var(--box-shadow);
     border-radius: var(--button-border-radius);
     padding: 8px 15px;
+    transition: all .3s;
 }
 
 .btn:hover {
@@ -170,4 +191,39 @@ form select {
     text-transform: capitalize;
     margin: 20px 0;
     text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    padding: 20px;
+}
+
+.sideBar {
+    background-color: var(--button-bg-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--form-field-color);
+    color: whitesmoke;
+}
+
+#user-fullname {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#role {
+    margin-top: -15px;
+}
+
+.function:hover {
+    background-color: var(--button-bg-hover);
+    padding: 10px;
+    border-radius: 5px;
 }
