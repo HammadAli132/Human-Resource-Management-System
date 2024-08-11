@@ -245,3 +245,35 @@ section {
     font-weight: bold;
     font-style: normal;
 }
+
+#employee-leave {
+    background-color: white;
+    align-self: center;
+}
+
+#employee-leave label {
+    color: var(--text-color-dark);
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#employee-leave label > input {
+    border: 1px solid var(--form-field-color);
+}
+
+#request-table {
+    width: 80%;
+    align-self: center;
+    border-collapse: collapse;
+    font-style: normal;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+th {
+    background-color: var(--button-bg-normal);
+}

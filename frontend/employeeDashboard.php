@@ -90,10 +90,27 @@
             </p>
         </section>
         <section id="leave">
-            
+            <h1>Please Fill The Form Below</h1>
+            <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>" id="employee-leave">
+                <label for="start-date">
+                    Select a Starting Date
+                    <input type="date" name="start-date" id="start-date" required>
+                </label>
+                <label for="end-date">
+                    Select a Ending Date
+                    <input type="date" name="end-date" id="end-date" required>
+                </label>
+                <input type="submit" value="Request" class="btn" name="request-leave">
+            </form>
         </section>
         <section id="leave-table">
-            
+            <table id="request-table">
+                <tr>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Request Status</th>
+                </tr>
+            </table>
         </section>
     </main>
 </body>
